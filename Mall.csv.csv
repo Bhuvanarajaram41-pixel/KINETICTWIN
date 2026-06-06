@@ -1,0 +1,150 @@
+Hour,Day,Zone,Event,Weather,Visitors
+8,Monday,Entrance,No,Sunny,250
+9,Monday,Foodcourt,No,Sunny,100
+10,Monday,Shopping area,Yes,Sunny,150
+11,Tuesday,Gaming Zone,No,Cloudy,50
+12,Tuesday,Cinema,No,Cloudy,100
+13,Tuesday,Parking,No,Cloudy,150
+14,Wednesday,Entrance,No,Rainy,100
+15,Wednesday,Foodcourt,Yes,Rainy,50
+8,Wednesday,Shopping area,Yes,Rainy,80
+9,Thursday,Gaming Zone,No,Sunny,100
+10,Thursday,Cinema,No,Sunny,120
+11,Thursday,Parking,No,Sunny,100
+12,Friday,Entrance,No,Cloudy,150
+13,Friday,Foodcourt,No,Cloudy,100
+14,Friday,Shopping area,Yes,Cloudy,150
+8,Saturday,Gaming Zone,Yes,Rainy,350
+9,Saturday,Cinema,No,Rainy,150
+10,Saturday,Parking,No,Rainy,280
+11,Sunday,Entrance,No,Sunny,500
+12,Sunday,Foodcourt,Yes,Sunny,600
+13,Sunday,Shopping area,Yes,Sunny,900
+14,Monday,Gaming Zone,No,Cloudy,80
+15,Monday,Cinema,No,Cloudy,50
+8,Monday,Parking,Yes,Cloudy,30
+9,Tuesday,Entrance,No,Rainy,50
+10,Tuesday,Foodcourt,No,Rainy,20
+11,Tuesday,Shopping area,No,Rainy,60
+12,Wednesday,Gaming Zone,No,Sunny,50
+13,Wednesday,Cinema,Yes,Sunny,65
+14,Wednesday,Parking,Yes,Sunny,70
+15,Thursday,Entrance,No,Cloudy,30
+8,Thursday,Foodcourt,No,Cloudy,40
+9,Thursday,Shopping area,No,Cloudy,50
+10,Friday,Gaming Zone,No,Rainy,60
+11,Friday,Cinema,No,Rainy,50
+12,Friday,Parking,Yes,Rainy,70
+13,Saturday,Entrance,Yes,Sunny,150
+14,Saturday,Foodcourt,No,Sunny,280
+15,Saturday,Shopping area,No,Sunny,400
+8,Sunday,Gaming Zone,No,Cloudy,450
+9,Sunday,Cinema,Yes,Cloudy,500
+10,Sunday,Parking,Yes,Cloudy,700
+11,Monday,Entrance,No,Rainy,80
+12,Monday,Foodcourt,No,Rainy,50
+13,Monday,Shopping area,Yes,Rainy,30
+14,Tuesday,Gaming Zone,No,Sunny,20
+15,Tuesday,Cinema,No,Sunny,60
+8,Tuesday,Parking,No,Sunny,40
+9,Wednesday,Entrance,No,Cloudy,150
+10,Wednesday,Foodcourt,Yes,Cloudy,200
+11,Wednesday,Shopping area,Yes,Cloudy,300
+12,Thursday,Gaming Zone,No,Rainy,30
+13,Thursday,Cinema,No,Rainy,50
+14,Thursday,Parking,No,Rainy,20
+15,Friday,Entrance,No,Sunny,200
+8,Friday,Foodcourt,No,Sunny,150
+9,Friday,Shopping area,Yes,Sunny,500
+10,Saturday,Gaming Zone,Yes,Cloudy,800
+11,Saturday,Cinema,No,Cloudy,900
+12,Saturday,Parking,No,Cloudy,300
+13,Sunday,Entrance,No,Rainy,500
+14,Sunday,Foodcourt,Yes,Rainy,300
+15,Sunday,Shopping area,Yes,Rainy,950
+8,Monday,Gaming Zone,No,Sunny,30
+9,Monday,Cinema,No,Sunny,50
+10,Monday,Parking,Yes,Sunny,100
+11,Tuesday,Entrance,No,Cloudy,20
+12,Tuesday,Foodcourt,No,Cloudy,40
+13,Tuesday,Shopping area,No,Cloudy,80
+14,Wednesday,Gaming Zone,No,Rainy,100
+15,Wednesday,Cinema,Yes,Rainy,40
+8,Wednesday,Parking,Yes,Rainy,60
+9,Thursday,Entrance,No,Sunny,80
+10,Thursday,Foodcourt,No,Sunny,20
+11,Thursday,Shopping area,No,Sunny,200
+12,Friday,Gaming Zone,No,Cloudy,350
+13,Friday,Cinema,No,Cloudy,600
+14,Friday,Parking,Yes,Cloudy,500
+15,Saturday,Entrance,Yes,Rainy,800
+8,Saturday,Foodcourt,No,Rainy,450
+9,Saturday,Shopping area,No,Rainy,660
+10,Sunday,Gaming Zone,No,Sunny,1500
+11,Sunday,Cinema,Yes,Sunny,1000
+12,Sunday,Parking,Yes,Sunny,700
+13,Monday,Entrance,No,Cloudy,60
+14,Monday,Foodcourt,No,Cloudy,50
+15,Monday,Shopping area,Yes,Cloudy,100
+8,Tuesday,Gaming Zone,No,Rainy,30
+9,Tuesday,Cinema,No,Rainy,45
+10,Tuesday,Parking,No,Rainy,30
+11,Wednesday,Entrance,No,Sunny,100
+12,Wednesday,Foodcourt,Yes,Sunny,350
+13,Wednesday,Shopping area,Yes,Sunny,950
+14,Thursday,Gaming Zone,No,Cloudy,50
+15,Thursday,Cinema,No,Cloudy,100
+8,Thursday,Parking,No,Cloudy,40
+9,Friday,Entrance,No,Rainy,60
+10,Friday,Foodcourt,No,Rainy,75
+11,Friday,Shopping area,Yes,Rainy,260
+12,Saturday,Gaming Zone,Yes,Sunny,1000
+13,Saturday,Cinema,No,Sunny,500
+14,Saturday,Parking,No,Sunny,1600
+15,Sunday,Entrance,No,Cloudy,600
+8,Sunday,Foodcourt,Yes,Cloudy,850
+9,Sunday,Shopping area,Yes,Cloudy,1500
+10,Monday,Gaming Zone,No,Rainy,30
+11,Monday,Cinema,No,Rainy,50
+12,Monday,Parking,Yes,Rainy,20
+13,Tuesday,Entrance,No,Sunny,85
+14,Tuesday,Foodcourt,No,Sunny,40
+15,Tuesday,Shopping area,No,Sunny,100
+8,Wednesday,Gaming Zone,No,Cloudy,65
+9,Wednesday,Cinema,Yes,Cloudy,600
+10,Wednesday,Parking,Yes,Cloudy,450
+11,Thursday,Entrance,No,Rainy,50
+12,Thursday,Foodcourt,No,Rainy,100
+13,Thursday,Shopping area,No,Rainy,40
+14,Friday,Gaming Zone,No,Sunny,300
+15,Friday,Cinema,No,Sunny,400
+8,Friday,Parking,Yes,Sunny,1000
+9,Saturday,Entrance,Yes,Cloudy,450
+10,Saturday,Foodcourt,No,Cloudy,350
+11,Saturday,Shopping area,No,Cloudy,550
+12,Sunday,Gaming Zone,No,Rainy,400
+13,Sunday,Cinema,Yes,Rainy,950
+14,Sunday,Parking,Yes,Rainy,1300
+15,Monday,Entrance,No,Sunny,50
+8,Monday,Foodcourt,No,Sunny,30
+9,Monday,Shopping area,Yes,Sunny,1400
+10,Tuesday,Gaming Zone,No,Cloudy,55
+11,Tuesday,Cinema,No,Cloudy,100
+12,Tuesday,Parking,No,Cloudy,45
+13,Wednesday,Entrance,No,Rainy,35
+14,Wednesday,Foodcourt,Yes,Rainy,60
+15,Wednesday,Shopping area,Yes,Rainy,250
+8,Thursday,Gaming Zone,No,Sunny,300
+9,Thursday,Cinema,No,Sunny,200
+10,Thursday,Parking,No,Sunny,75
+11,Friday,Entrance,No,Cloudy,300
+12,Friday,Foodcourt,No,Cloudy,200
+13,Friday,Shopping area,Yes,Cloudy,1000
+14,Saturday,Gaming Zone,Yes,Rainy,850
+15,Saturday,Cinema,No,Rainy,350
+8,Saturday,Parking,No,Rainy,600
+9,Sunday,Entrance,No,Sunny,700
+10,Sunday,Foodcourt,Yes,Sunny,1000
+11,Sunday,Shopping area,Yes,Sunny,2000
+12,Monday,Gaming Zone,No,Cloudy,50
+13,Monday,Cinema,No,Cloudy,80
