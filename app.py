@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # 1. Page Layout & Modern Styling Parameters
 st.set_page_config(
@@ -27,18 +29,23 @@ st.title("⚡ KINETICTWIN (SmartFootAI) Control Panel")
 st.caption("Real-time predictive edge microgrid optimization and hardware resource allocation framework")
 st.write("---")
 
-# 2. Loading the Serialized Machine Learning Brain
+# 2. Loading the Serialized Machine Learning Brain & Dataset
 @st.cache_resource
 def load_serialized_engine():
     model = joblib.load('kinetic_rf_model.pkl')
     columns = joblib.load('model_columns.pkl')
     return model, columns
 
+@st.cache_data
+def load_historical_dataset():
+    return pd.read_csv('Mall_Efficient.csv')
+
 try:
     rf_model, model_columns = load_serialized_engine()
+    df_historical = load_historical_dataset()
     st.sidebar.success("📦 Live AI Pipeline Engine Active")
 except Exception as e:
-    st.sidebar.error(f"❌ Core Error Loading Binaries: {e}")
+    st.sidebar.error(f"❌ Core Error Loading Assets: {e}")
     st.stop()
 
 # 3. Sidebar Configuration — Gathering Dynamic Sensor Parameters
@@ -50,19 +57,19 @@ selected_weather = st.sidebar.selectbox("Weather Condition", ['Sunny', 'Cloudy',
 selected_event = st.sidebar.radio("Active Special Event?", ['No', 'Yes'])
 
 # 4. Main Presentation View Splits
-col_left, col_right = st.columns([1, 1.2], gap="large") # Added a large gap to prevent column squeezing
+col_left, col_right = st.columns([1, 1.2], gap="large")
 
 with col_left:
     st.markdown("### 📊 Operational Telemetry Status")
     
-    # Header KPI Metrics Blocks
-    kpi1, kpi2, kpi3 = st.columns(3)
+    # Header KPI Metrics Blocks (Fixed Column Proportions & Clean Labels)
+    kpi1, kpi2, kpi3 = st.columns([1.2, 1, 1])
     with kpi1:
-        st.metric(label="PREDICTIVE R² ACCURACY", value="90.87%")
+        st.metric(label="MODEL ACCURACY", value="90.87%")
     with kpi2:
-        st.metric(label="CURRENT ZONE STATE", value="CRITICAL" if selected_zone == "Foodcourt" else "OPTIMAL")
+        st.metric(label="ZONE STATE", value="CRITICAL" if selected_zone == "Foodcourt" else "OPTIMAL")
     with kpi3:
-        st.metric(label="GRID ROUTING MODE", value="Auto-Harvest")
+        st.metric(label="GRID ROUTING", value="Auto-Harvest")
         
     st.write("---")
     
@@ -99,12 +106,33 @@ with col_left:
         st.success("💤 **SIGNAL: LOW SIGNAL STANDBY** \n\nShifting microgrid sub-relays to sleep state to avoid hardware wear and maintenance cycle degradation.")
 
 with col_right:
-    st.markdown("### 🗺️ System Spatial Distribution Map")
-    # Using the updated 'use_container_width' configuration parameter to eliminate the warning box
+    st.markdown("### 🗺️ Live System Spatial Distribution Map")
+    
+    # Dynamic Filtering Logic for Heatmap Matrix
+    filtered_df = df_historical[
+        (df_historical['Day'] == selected_day) & 
+        (df_historical['Weather'] == selected_weather) & 
+        (df_historical['Event'] == selected_event)
+    ]
+    
+    # Fallback backup if the specific combination contains no rows
+    if filtered_df.empty:
+        filtered_df = df_historical[df_historical['Day'] == selected_day]
+
+    # Create the Live Pivot Table
+    floor_map_data = filtered_df.pivot_table(index='Zone', columns='Hour', values='Visitors', aggfunc='mean')
+    
+    # Generate and render the Live Plot
     try:
-        st.image("mall_floor_map.png", caption="Historical Distribution Matrix Map across Mapped Operating Boundaries", use_container_width=True)
-    except:
-        st.info("Analytics visualization file asset map not located.")
+        fig, ax = plt.subplots(figsize=(10, 5))
+        sns.heatmap(floor_map_data, annot=True, fmt=".0f", cmap="YlOrRd", linewidths=0.5, 
+                    cbar_kws={'label': 'Crowd Density'}, ax=ax)
+        ax.set_title(f"SmartFootAI Floor Matrix Map ({selected_day} Trends)", fontsize=12, fontweight='bold')
+        ax.set_xlabel("Operational Hours")
+        ax.set_ylabel("Mall Grid Zones")
+        st.pyplot(fig)
+    except Exception as img_err:
+        st.info("Generating real-time analytics distribution matrix map...")
 
 st.write("---")
 st.caption("Developed by Team Tech Tornado | 2nd-Year CSE AI/ML | KineticTwin Platform Core")
